@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mundo Infinito - Reforged</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="ui-layer">
+            
+            <div class="hud-top">
+                <div class="status-bars">
+                    <div class="bar health-bar"><span style="width: 100%;"></span></div>
+                    <div class="bar stamina-bar"><span style="width: 80%;"></span></div>
+                </div>
+                <div class="score-board">
+                    <span>💎 0</span>
+                    <span>🪵 0</span>
+                </div>
+                <button id="inventory-btn" class="pixel-btn">🎒</button>
+            </div>
+
+            <div class="mobile-controls">
+                <div class="d-pad">
+                    <button class="d-btn up" data-key="ArrowUp">▲</button>
+                    <button class="d-btn left" data-key="ArrowLeft">◀</button>
+                    <button class="d-btn right" data-key="ArrowRight">▶</button>
+                    <button class="d-btn down" data-key="ArrowDown">▼</button>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="action-btn jump" data-key="Space">⏏</button>
+                    <button class="action-btn attack" data-key="z">⚔</button>
+                </div>
+            </div>
+
+            <div id="inventory-modal" class="modal hidden">
+                <div class="modal-content pixel-border">
+                    <div class="modal-header">
+                        <h2>Mochila</h2>
+                        <button id="close-inv" class="close-btn">X</button>
+                    </div>
+                    <div class="grid-slots">
+                        <div class="slot occupied">🗡️</div>
+                        <div class="slot occupied">🛡️</div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
